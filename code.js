@@ -63,7 +63,7 @@ function phaseTwo() {
     makeTimer("FMA", 60, section);
     makeTimer("Fly", 18, section);
     makeTimer("Scroll", 30, section);
-    makeTimer("Scroll", 10, section);
+    makeTimer("Clutch", 10, section);
     makeTimer("TP", 8, section);
 }
 
