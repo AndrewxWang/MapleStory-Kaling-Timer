@@ -14,7 +14,7 @@
 .header h1 {
     text-align: center;
     color: white;
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     padding: 1rem;
 }
 .swaps {
@@ -29,11 +29,11 @@
     color: #A6CFD5;
     border: 0;
     display: inline-block;
-    padding-left: 10rem;
-    padding-right: 10rem;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-    font-size: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -55,16 +55,20 @@ button:focus {
 
 .mainContainer h1{
     color: white;
-    font-size: 5rem;
+    font-size: 2rem;
 }
 
 .mainContainer .peril {
     border: 0;
     background-color: transparent;
     text-align: center;
-    padding: 5rem;
+    padding: 2rem;
     color: #ABD2FA;
     font-size: 5rem;
+}
+
+.mainContainer img {
+    width: 15rem;
 }
 
 .mainContainer .peril:hover {
@@ -82,8 +86,8 @@ button:focus {
     color: #ABD2FA;
     border: 0;
     cursor: pointer;
-    font-size: 6rem;
-    padding: 5rem;
+    font-size: 2rem;
+    padding: 2rem;
 }
 
 #timers button:hover {
@@ -101,7 +105,7 @@ button:focus {
 
 #footer h1, a {
     color: white;
-    font-size: 2rem;
+    font-size: 1rem;
     text-decoration: none;
 }
 
