@@ -107,8 +107,9 @@ function phaseThree() {
 }
 
 let helpVar = 1;
+
 function showHelp() {
-    if (helpVar > 1) {
+    if (helpVar === 1) {
         document.getElementById("helpText").style.display = "block";
     } else {
         document.getElementById("helpText").style.display = "none";
