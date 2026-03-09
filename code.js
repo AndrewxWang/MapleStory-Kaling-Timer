@@ -70,7 +70,8 @@ function tiger() {
     document.getElementById("tiger").style = "opacity: 1;";
 
     makeTimer("FMA", 60, containerId);
-    makeTimer("TP", 10, containerId);
+    makeTimer("Dash", 10, containerId, false, false);
+    makeTimer("TP", 10, containerId, false, false);
 }
 
 function phaseTwo() {
