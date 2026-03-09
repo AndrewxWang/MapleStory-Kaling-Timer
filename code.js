@@ -15,12 +15,15 @@ function makeTimer(name, start, containerId, repeat = false, autoStart = true) {
             time--;
             btn.textContent = name + ": " + time + "s";
             if (time === 0) {
-                btn.style.color = "red"; // turn red at 0
+                btn.style.color = "darkred"; // turn red at 0
                 if (repeat) {
                     time = start; // restart timer automatically
                     btn.textContent = name + ": " + time + "s";
                     btn.style.color = "#ABD2FA"; // reset color
                 }
+            } else if (time <= (start * 0.1)) {
+                btn.style.color = "red";
+            } 
             } else if (time <= (start * 0.2)) {
                 btn.style.color = "orange"; // yellow color at 20% of time remaining
             } else if (time <= (start * 0.3)) {
