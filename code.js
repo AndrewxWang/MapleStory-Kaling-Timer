@@ -1,5 +1,6 @@
-function makeTimer(name, start, section) {
+function makeTimer(name, start, containerId, repeat = false) {
     let time = start;
+    const section = document.getElementById(containerId);
 
     const btn = document.createElement("button");
     btn.textContent = name + ": " + time + "s";
@@ -9,7 +10,12 @@ function makeTimer(name, start, section) {
             time--;
             btn.textContent = name + ": " + time + "s";
             if (time === 0) {
-                    btn.style.color = "red"; // turn red at 0
+                btn.style.color = "red"; // turn red at 0
+                if (repeat) {
+                    time = start; // restart timer automatically
+                    btn.textContent = name + ": " + time + "s";
+                    btn.style.color = "#ABD2FA"; // reset color
+                }
             }
         }
     }, 1000);
@@ -24,58 +30,68 @@ function makeTimer(name, start, section) {
 }
 
 function dog() {
-    let section = document.getElementById("timers");
+    const containerId = "timers1";
+    const section = document.getElementById(containerId);
     section.innerHTML = "";
+    document.getElementById("phaseOneTitle").innerText = "Phase One: Dog";
+    document.getElementById("dog").style = "opacity: 1;";
+    document.getElementById("bird").style = "opacity: 0.5;";
+    document.getElementById("tiger").style = "opacity: 0.5;";
 
-    // update peril
-    document.getElementById("phaseOne").innerHTML = "Phase One: Dog";
-
-    makeTimer("FMA", 60, section);
-    makeTimer("Cloud", 37, section);
+    makeTimer("FMA", 60, containerId);
+    makeTimer("Cloud", 35, containerId);
 }
 
 function bird() {
-    let section = document.getElementById("timers");
+    const containerId = "timers1";
+    const section = document.getElementById(containerId);
     section.innerHTML = "";
+    document.getElementById("phaseOneTitle").innerText = "Phase One: Bird";
+    document.getElementById("dog").style = "opacity: 0.5;";
+    document.getElementById("bird").style = "opacity: 1;";
+    document.getElementById("tiger").style = "opacity: 0.5;";
 
-    // update peril
-    document.getElementById("phaseOne").innerHTML = "Phase One: Bird";
-
-    makeTimer("FMA", 60, section);
-    makeTimer("Fly", 18, section);
+    makeTimer("FMA", 60, containerId);
+    makeTimer("Fly", 18, containerId);
 }
 
 function tiger() {
-    let section = document.getElementById("timers");
+    const containerId = "timers1";
+    const section = document.getElementById(containerId);
     section.innerHTML = "";
+    document.getElementById("phaseOneTitle").innerText = "Phase One: Tiger";
+    document.getElementById("dog").style = "opacity: 0.5;";
+    document.getElementById("bird").style = "opacity: 0.5;";
+    document.getElementById("tiger").style = "opacity: 1;";
 
-    // update peril
-    document.getElementById("phaseOne").innerHTML = "Phase One: Tiger";
-
-    makeTimer("FMA", 60, section);
-    makeTimer("TP", 10, section);
+    makeTimer("FMA", 60, containerId);
+    makeTimer("TP", 10, containerId);
 }
 
 function phaseTwo() {
-    let section = document.getElementById("timers");
+    const containerId = "timers2";
+    const section = document.getElementById(containerId);
     section.innerHTML = "";
 
-    makeTimer("FMA", 60, section);
-    makeTimer("Fly", 18, section);
-    makeTimer("Scroll", 30, section);
-    makeTimer("Clutch", 10, section);
-    makeTimer("TP", 8, section);
+    document.getElementById("p2").style = "opacity: 0.5;";
+    makeTimer("FMA", 60, containerId, true);
+    makeTimer("Fly", 18, containerId);
+    makeTimer("Scroll", 30, containerId);
+    makeTimer("Clutch", 10, containerId);
+    makeTimer("TP", 8, containerId);
 }
 
 function phaseThree() {
-    let section = document.getElementById("timers");
+    const containerId = "timers3";
+    const section = document.getElementById(containerId);
     section.innerHTML = "";
     
     let clutchTimer = 13;
 
-    makeTimer("Chain", 10, section);
-    makeTimer("Clutch", clutchTimer, section); // WIP change to 10 after all 3 peril dead
-    makeTimer("Slam", 13, section);
-    makeTimer("Scroll", 12, section);
+    document.getElementById("p3").style = "opacity: 0.5;";
+    makeTimer("Chain", 10, containerId);    
+    makeTimer("Clutch", clutchTimer, containerId, true);
+    makeTimer("Slam", 13, containerId);
+    makeTimer("Scroll", 12, containerId);
 
 }

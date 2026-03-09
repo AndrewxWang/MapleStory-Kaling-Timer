@@ -2,11 +2,16 @@
 <html lang="en">
 
 <head>
-    <title>Hard Kaling Timer</title>
+    <title>MapleStory Kaling Timer</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name= "viewport" content="width=device-width, initial-scale=1">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/x-icon" href="/images/mobicon.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <script src="code.js" defer></script>
 </head>
@@ -15,29 +20,57 @@
     <div class="header">
         <h1>MapleStory Hard Kaling Timer</h1><br>
         <div class="swaps">
-            <button onclick="window.location.href='index.html'">P1</button>
-            <button onclick="window.location.href='p2.html'">P2</button>
-            <button onclick="window.location.href='p3.html'">P3</button>
+            <button onclick="showPhase('phase1')">P1</button>
+            <button onclick="showPhase('phase2')">P2</button>
+            <button onclick="showPhase('phase3')">P3</button>
         </div>
     </div>
-    
+
     <br><br>
 
     <div class="mainContainer">
-        <h1 id="phaseOne">Phase One:</h1>
-        <button class="peril" onclick="dog()" id="dog"><img src="images/hundun.webp"></button>
-        <button class="peril" onclick="bird()" id="tiger"><img src="images/qiongqi.webp"></button>
-        <button class="peril" onclick="tiger()" id="bird"><img src="images/taowu.webp"></button>
-        
-        <div id="timers">
-            <br><br>
-            <h1>Choose a Peril</h1>
+        <div id="phase1" class="phase" style="display: none;">
+            <h1 id="phaseOneTitle">Phase One:</h1>
+            <button class="peril" onclick="dog()" id="dog"><img src="images/hundun.webp"></button>
+            <button class="peril" onclick="bird()" id="bird"><img src="images/qiongqi.webp"></button>
+            <button class="peril" onclick="tiger()" id="tiger"><img src="images/taowu.webp"></button>
+            <div id="timers1" class="timers">
+                <br>
+                <h1>Choose a Peril</h1>
+            </div>
         </div>
 
-        <div id="footer">
-            <h1><a href="https://www.youtube.com/@maplestoryweeklyclips/" target="_blank">Made by Pvac (BlueStixs)</a></h1>
-            <h1>Contact @peevac on discord for any bugs</h1>
+        <div id="phase2" class="phase" style="display: none;">
+            <h1>Phase Two:</h1>
+            <button class="peril" onclick="phaseTwo()" id="p2"><img src="images/kaling.webp"></button>
+            <div id="timers2" class="timers">
+                <br>
+                <h1>Click on Kaling when Ready</h1>
+            </div>
+        </div>
+
+        <div id="phase3" class="phase" style="display: none;">
+            <h1>Phase Three:</h1>
+            <button class="peril" onclick="phaseThree()" id="p3"><img src="images/frenzied.webp"></button>
+            <div id="timers3" class="timers">
+                <br>
+                <h1>Click on Kaling when Ready</h1>
+            </div>
         </div>
     </div>
+
+    <div id="footer">
+        <h1><a href="https://www.youtube.com/@maplestoryweeklyclips/" target="_blank">Made by Pvac (BlueStixs)</a></h1>
+        <h1>Contact @peevac on discord for any bugs</h1>
+    </div>
+
+    <script>
+        function showPhase(phaseId) {
+            const phases = document.querySelectorAll('.phase');
+            phases.forEach(phase => phase.style.display = 'none');
+            document.getElementById(phaseId).style.display = 'block';
+        }
+        showPhase('phase1');
+    </script>
 </body>
 </html>
