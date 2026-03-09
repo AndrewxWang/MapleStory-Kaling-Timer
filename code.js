@@ -95,9 +95,9 @@ function phaseThree() {
     let clutchTimer = 13;
 
     document.getElementById("p3").style = "opacity: 0.5;";
-    makeTimer("Chain", 10, containerId);    
     makeTimer("Clutch", clutchTimer, containerId, true);
-    makeTimer("Slam", 13, containerId);
-    makeTimer("Scroll", 12, containerId);
+    makeTimer("Chain", 10, containerId, false, false);    
+    makeTimer("Slam", 13, containerId, false, false);
+    makeTimer("Scroll", 12, containerId, false, false);
 
 }
