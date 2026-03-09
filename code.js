@@ -1,10 +1,15 @@
-function makeTimer(name, start, containerId, repeat = false) {
+function makeTimer(name, start, containerId, repeat = false, autoStart = true) {
     let time = start;
     const section = document.getElementById(containerId);
 
     const btn = document.createElement("button");
     btn.textContent = name + ": " + time + "s";
 
+    if (!autoStart) {
+        time = 0;
+        btn.textContent = name + ": Click to Start"; 
+    }
+    
     setInterval(function () {
         if (time > 0) {
             time--;
@@ -39,7 +44,7 @@ function dog() {
     document.getElementById("tiger").style = "opacity: 0.5;";
 
     makeTimer("FMA", 60, containerId);
-    makeTimer("Cloud", 35, containerId);
+    makeTimer("Cloud", 35, containerId, false, false);
 }
 
 function bird() {
@@ -78,7 +83,7 @@ function phaseTwo() {
     makeTimer("Fly", 18, containerId);
     makeTimer("Scroll", 30, containerId);
     makeTimer("Clutch", 10, containerId, true);
-    makeTimer("TP", 8, containerId);
+    makeTimer("TP", 8, containerId, false, false);
 }
 
 function phaseThree() {
