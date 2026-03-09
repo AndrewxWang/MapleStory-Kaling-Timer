@@ -106,8 +106,15 @@ function phaseThree() {
 
 }
 
+let helpVar = 1;
 function showHelp() {
-    document.getElementById("helpText").style.display = "block";
+    if (helpVar > 1) {
+        document.getElementById("helpText").style.display = "block";
+    } else {
+        document.getElementById("helpText").style.display = "none";
+    }
+
+    helpVar *= -1;
 }
 
 function showPhase(phaseId) {
