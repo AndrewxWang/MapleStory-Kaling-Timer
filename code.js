@@ -21,6 +21,10 @@ function makeTimer(name, start, containerId, repeat = false, autoStart = true) {
                     btn.textContent = name + ": " + time + "s";
                     btn.style.color = "#ABD2FA"; // reset color
                 }
+            } else if (time <= (start * 0.3)) {
+                btn.style.color = "yellow"; // yellow color at 30% of time remaining
+            } else if (time <= (start * 0.2)) {
+                btn.style.color = "orange"; // orange at 20% of time remaining
             }
         }
     }, 1000);
@@ -43,7 +47,7 @@ function dog() {
     document.getElementById("bird").style = "opacity: 0.5;";
     document.getElementById("tiger").style = "opacity: 0.5;";
 
-    makeTimer("FMA", 60, containerId);
+    makeTimer("FMA", 60, containerId, true);
     makeTimer("Cloud", 35, containerId, false, false);
 }
 
@@ -101,3 +105,27 @@ function phaseThree() {
     makeTimer("Scroll", 12, containerId, false, false);
 
 }
+
+function showHelp() {
+    document.getElementById("helpText").style.display = "block";
+}
+
+function showPhase(phaseId) {
+    const phases = document.querySelectorAll('.phase');
+
+    phases.forEach(phase => {
+        phase.style.display = 'none';
+        phase.style.opacity = '0';
+    });
+
+    const phase = document.getElementById(phaseId);
+
+    phase.style.display = 'block';
+
+    setTimeout(() => {
+        phase.style.transition = 'opacity 0.67s ease';
+        phase.style.opacity = '1';
+    }, 10);
+}
+
+showPhase('phase1');

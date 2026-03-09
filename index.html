@@ -7,11 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" type="image/x-icon" href="images/mobicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="code.js" defer></script>
 </head>
@@ -29,7 +27,7 @@
     <br><br>
 
     <div class="mainContainer">
-        <div id="phase1" class="phase" style="display: none;">
+        <div id="phase1" class="phase">
             <h1 id="phaseOneTitle">Phase One:</h1>
             <button class="peril" onclick="dog()" id="dog"><img src="images/hundun.webp"></button>
             <button class="peril" onclick="bird()" id="bird"><img src="images/qiongqi.webp"></button>
@@ -40,7 +38,7 @@
             </div>
         </div>
 
-        <div id="phase2" class="phase" style="display: none;">
+        <div id="phase2" class="phase">
             <h1>Phase Two:</h1>
             <button class="peril" onclick="phaseTwo()" id="p2"><img src="images/kaling.webp"></button>
             <div id="timers2" class="timers">
@@ -49,7 +47,7 @@
             </div>
         </div>
 
-        <div id="phase3" class="phase" style="display: none;">
+        <div id="phase3" class="phase">
             <h1>Phase Three:</h1>
             <button class="peril" onclick="phaseThree()" id="p3"><img src="images/frenzied.webp"></button>
             <div id="timers3" class="timers">
@@ -62,17 +60,25 @@
     <button id="apple-btn" style="display:none;">Apple: 10:00</button>
 
     <div id="footer">
+        <div id="help"><button onclick="showHelp()"><img src="images/help.png"></button></div>
+        
+        <div id="helpText">
+            <p>MapleStory Kaling Timer inspired by <a href="https://saltette.github.io" target="_blank">@Saltette's</a> Kalos timer! 
+                This timer is mainly used for the Kaling Destiny Liberation Mission, but 
+                can be used to get a gist of general timings as well. Preferably, you will 
+                have someone on the side who manages the timer and shotcalls while you run the boss.
+            </p>
+                <br>
+            <p>Simply click on a peril in P1 to start and timers will begin running. FMA timers
+                in P1 dog and P2 kaling will automatically restart by themselves, but if they
+                are delayed by bind, you can simply re-click the button to restart it at 60s.
+                Clutch timers also automatically restart by themeselves, but if they are delayed,
+                you can also restart them.
+            </p>
+        </div>
+
         <h1><a href="https://www.youtube.com/@maplestoryweeklyclips/" target="_blank">Made by Pvac (BlueStixs)</a></h1>
         <h1>Contact @peevac on discord for any bugs</h1>
     </div>
-
-    <script>
-        function showPhase(phaseId) {
-            const phases = document.querySelectorAll('.phase');
-            phases.forEach(phase => phase.style.display = 'none');
-            document.getElementById(phaseId).style.display = 'block';
-        }
-        showPhase('phase1');
-    </script>
 </body>
 </html>

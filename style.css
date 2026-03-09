@@ -1,12 +1,17 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: bold;
+}
+
+body {
     background-color: #1e1e1e;
-    font-family: "Lexend", sans-serif;
 }
 
 h1 {
-    font-weight: normal;
+    font-weight: bold;
+    font-family: "Smooch Sans", sans-serif;
 }
 
 .header {
@@ -16,7 +21,7 @@ h1 {
 .header h1 {
     text-align: center;
     color: white;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     padding: 1rem;
 }
 
@@ -74,6 +79,8 @@ button:focus {
 
 .mainContainer .peril img {
     height: 10rem;
+    background-color: #2b2b2b;
+    border-radius: 1rem;
 }
 
 .mainContainer .peril:hover {
@@ -120,4 +127,47 @@ button:focus {
 
 #footer a:hover {
     color: #ABD2FA;
+}
+
+#help {
+    z-index: 99;
+}
+
+#help img {
+    cursor: pointer;
+    position: fixed;
+    margin: 1rem;
+    right: 0;
+    bottom: 0;
+    width: 2rem;
+}
+
+#helpText {
+    background-color: #ABD2FA;
+    border-radius: 1rem;
+    color: #1e1e1e;
+    display: none;
+    text-align: left;
+    font-size: 0.75rem;
+    z-index: 99;
+
+    position: fixed;
+    margin: 1rem;
+    right: 0;
+    bottom: 2.5rem;
+
+    max-width: 20rem;
+    background-color: #ABD2FA;
+    display: none;
+    padding: 1rem;
+    z-index: 999;
+}   
+
+#helpText a {
+    color: darkblue;
+    font-size: 0.75rem;
+}
+
+#helpText a:hover {
+    color: blue;
 }
