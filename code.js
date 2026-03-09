@@ -77,7 +77,7 @@ function phaseTwo() {
     makeTimer("FMA", 60, containerId, true);
     makeTimer("Fly", 18, containerId);
     makeTimer("Scroll", 30, containerId);
-    makeTimer("Clutch", 10, containerId);
+    makeTimer("Clutch", 10, containerId, true);
     makeTimer("TP", 8, containerId);
 }
 
