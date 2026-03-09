@@ -21,10 +21,10 @@ function makeTimer(name, start, containerId, repeat = false, autoStart = true) {
                     btn.textContent = name + ": " + time + "s";
                     btn.style.color = "#ABD2FA"; // reset color
                 }
-            } else if (time <= (start * 0.3)) {
-                btn.style.color = "yellow"; // yellow color at 30% of time remaining
             } else if (time <= (start * 0.2)) {
-                btn.style.color = "orange"; // orange at 20% of time remaining
+                btn.style.color = "orange"; // yellow color at 20% of time remaining
+            } else if (time <= (start * 0.3)) {
+                btn.style.color = "yellow"; // orange at 30% of time remaining
             }
         }
     }, 1000);
