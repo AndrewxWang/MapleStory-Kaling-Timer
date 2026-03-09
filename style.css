@@ -85,9 +85,13 @@ button:focus {
 
 .mainContainer .peril:hover {
     cursor: pointer;
-    transform: scale(110%);
-    transition: transform 0.5s ease;
     transition: opacity 0.2s ease;
+}
+
+.mainContainer .peril img:hover {
+    background-color: #26408B;
+    transform: scale(110%);
+    transition: all 0.5s ease;
 }
 
 .mainContainer p {
