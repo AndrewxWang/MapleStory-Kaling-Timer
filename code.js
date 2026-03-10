@@ -75,7 +75,7 @@ function tiger() {
     document.getElementById("bird").style = "opacity: 0.5;";
     document.getElementById("tiger").style = "opacity: 1;";
 
-    makeTimer("FMA", 60, containerId);
+    makeTimer("FMA", 60, containerId, false, false);
     makeTimer("Dash", 10, containerId, false, false);
     makeTimer("TP", 10, containerId, false, false);
 }
@@ -88,9 +88,8 @@ function phaseTwo() {
     document.getElementById("p2").style = "opacity: 0.5;";
     makeTimer("FMA", 60, containerId, true);
     makeTimer("Fly", 18, containerId);
-    makeTimer("Clutch", 10, containerId, true);
+    makeTimer("Clutch", 13, containerId, true, false);
     makeTimer("Scroll", 30, containerId, false, false);
-    makeTimer("TP", 8, containerId, false, false);
 }
 
 function phaseThree() {
@@ -99,11 +98,10 @@ function phaseThree() {
     section.innerHTML = "";
     
     document.getElementById("p3").style = "opacity: 0.5;";
-    makeTimer("Clutch", 13, containerId, true);
+    makeTimer("Clutch", 13, containerId, true, false);
     makeTimer("Chain", 10, containerId, false, false);    
     makeTimer("Slam", 13, containerId, false, false);
     makeTimer("Scroll", 12, containerId, false, false);
-
 }
 
 function phaseFour() {
