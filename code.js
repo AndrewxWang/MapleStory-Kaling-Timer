@@ -88,7 +88,7 @@ function phaseTwo() {
     document.getElementById("p2").style = "opacity: 0.5;";
     makeTimer("FMA", 60, containerId, true);
     makeTimer("Fly", 18, containerId);
-    makeTimer("Clutch", 13, containerId, true, false);
+    makeTimer("Clutch", 15, containerId, true, false);
     makeTimer("Scroll", 30, containerId, false, false);
 }
 
