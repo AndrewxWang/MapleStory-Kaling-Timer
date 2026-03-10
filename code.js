@@ -51,6 +51,8 @@ function dog() {
 
     makeTimer("FMA", 60, containerId, true);
     makeTimer("Cloud", 35, containerId, false, false);
+    makeTimer("Strings", 12, containerId, true, false);
+
 }
 
 function bird() {
