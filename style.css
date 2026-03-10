@@ -51,7 +51,7 @@ h1 {
     background-color: #26408B;
     color: #C2E7D9;
     cursor: pointer;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease-in-out;
 }
 
 button:focus {
@@ -85,13 +85,13 @@ button:focus {
 
 .mainContainer .peril:hover {
     cursor: pointer;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .mainContainer .peril img:hover {
     background-color: #26408B;
     transform: scale(110%);
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
 }
 
 .mainContainer p {
@@ -113,7 +113,7 @@ button:focus {
 .timers button:hover {
     color: white;
     background-color: #26408B;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease-in-out;
 }
 
 #footer {
@@ -123,7 +123,7 @@ button:focus {
     width: 100%;
 }
 
-#footer h1, a {
+#footer h1, #footer a {
     color: white;
     font-size: 1rem;
     text-decoration: none;
@@ -137,6 +137,13 @@ button:focus {
     z-index: 99;
 }
 
+#help button {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0;
+}
+
 #help img {
     cursor: pointer;
     position: fixed;
@@ -144,6 +151,11 @@ button:focus {
     right: 0;
     bottom: 0;
     width: 2rem;
+}
+
+#help img:hover {
+    transform: scale(1.1);
+    transition: all 0.2 s ease-in-out;
 }
 
 #helpText {
