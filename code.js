@@ -98,13 +98,22 @@ function phaseThree() {
     const section = document.getElementById(containerId);
     section.innerHTML = "";
     
-    let clutchTimer = 13;
-
     document.getElementById("p3").style = "opacity: 0.5;";
-    makeTimer("Clutch", clutchTimer, containerId, true);
+    makeTimer("Clutch", 13, containerId, true);
     makeTimer("Chain", 10, containerId, false, false);    
     makeTimer("Slam", 13, containerId, false, false);
     makeTimer("Scroll", 12, containerId, false, false);
+
+}
+
+function phaseFour() {
+    const containerId = "timers4";
+    const section = document.getElementById(containerId);
+    section.innerHTML = "";
+    
+    document.getElementById("p4").style = "opacity: 0.5;";
+    makeTimer("FMA", 60, containerId, true);
+    makeTimer("Clutch", 10, containerId, true, false);
 
 }
 

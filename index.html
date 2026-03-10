@@ -23,6 +23,7 @@
             <button onclick="location.reload()">P1</button>
             <button onclick="showPhase('phase2')">P2</button>
             <button onclick="showPhase('phase3')">P3</button>
+            <button onclick="showPhase('phase4')">P3*</button>
         </div>
     </div>
 
@@ -45,7 +46,7 @@
             <button class="peril" onclick="phaseTwo()" id="p2"><img src="images/kaling.webp"></button>
             <div id="timers2" class="timers">
                 <br>
-                <h1>Click on Kaling when Ready</h1>
+                <h1>Click on Kaling on P2 Entrance</h1>
             </div>
         </div>
 
@@ -54,7 +55,16 @@
             <button class="peril" onclick="phaseThree()" id="p3"><img src="images/frenzied.webp"></button>
             <div id="timers3" class="timers">
                 <br>
-                <h1>Click on Kaling when Ready</h1>
+                <h1>Click on Kaling on P3 Entrance</h1>
+            </div>
+        </div>
+
+        <div id="phase4" class="phase">
+            <h1>Phase Three*:</h1>
+            <button class="peril" onclick="phaseFour()" id="p4"><img src="images/frenzied.webp"></button>
+            <div id="timers4" class="timers">
+                <br>
+                <h1>Click on Kaling when all three Perils are Dead</h1>
             </div>
         </div>
     </div>
