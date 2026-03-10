@@ -99,7 +99,7 @@ function phaseThree() {
     
     document.getElementById("p3").style = "opacity: 0.5;";
     makeTimer("Clutch", 13, containerId, true, false);
-    makeTimer("Chain", 10, containerId, false, false);    
+    makeTimer("Chain", 10, containerId, true, false);    
     makeTimer("Slam", 13, containerId, false, false);
     makeTimer("Scroll", 12, containerId, false, false);
 }
