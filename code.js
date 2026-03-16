@@ -117,6 +117,24 @@ function phaseFour() {
 
 }
 
+let appleVar = 1;
+
+function appleTimer() {
+    const containerId = "appleTimerContainer";    
+    const section = document.getElementById(containerId);
+    section.innerHTML = "";
+
+    if (appleVar === 1) {
+        section.style.display = "block";
+
+        makeTimer("Apple", 600, containerId, false, true);
+    } else {
+        section.style.display = "none";
+    }
+
+    appleVar *= -1;
+}
+
 let helpVar = 1;
 
 function showHelp() {

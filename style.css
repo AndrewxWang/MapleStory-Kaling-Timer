@@ -190,7 +190,48 @@ button:focus {
 
 
 @media only screen and (max-width: 850px) {
-    #footer {
+    #credit {
         display: none;
     }
+}
+
+#apple {
+    z-index: 99;
+}
+
+#apple button {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0;
+}
+
+#apple img {
+    cursor: pointer;
+    position: fixed;
+    margin: 1rem;
+    left: 0;
+    bottom: 0;
+    width: 2rem;
+}
+
+#apple img:hover {
+    transform: scale(1.1);
+    transition: all 0.2 s ease-in-out;
+}
+
+
+#appleTimerContainer {
+    z-index: 99;
+    position: fixed;
+    left: 3rem;
+    bottom: 0.25rem;
+
+    max-width: 20rem;
+    display: none;
+    z-index: 999;
+}   
+
+#appleTimerContainer button {
+    font-size: 1.25rem;
 }
