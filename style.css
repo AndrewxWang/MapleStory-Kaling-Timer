@@ -229,9 +229,18 @@ button:focus {
     font-size: 1.25rem;
 }
 
-@media only screen and (max-width: 850px) {
-    #footer {
+@media only screen and (max-width: 500px) {
+    /* #footer {
         position: relative;
+    } */
+
+    .mainContainer .peril {
+        border: 0;
+        background-color: transparent;
+        text-align: center;
+        padding: 0.5rem;
+        color: #ABD2FA;
+        font-size: 5rem;  
     }
 
     .mainContainer .peril img {
@@ -243,7 +252,7 @@ button:focus {
         padding-right: 1.5rem;
         padding-top: .25rem;
         padding-bottom: .25rem;
-        font-size: 1rem;
+        font-size: 1.5rem;
 
         border-radius: 1rem;
         margin: 0.55rem;
@@ -258,5 +267,9 @@ button:focus {
         border-radius: 1rem;
         margin: 0.75rem;
         padding: 0.25rem 0.5rem;
+    }
+
+    #footer {
+        bottom: 3.5rem;
     }
 }
