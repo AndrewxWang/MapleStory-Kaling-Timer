@@ -190,8 +190,8 @@ button:focus {
 
 
 @media only screen and (max-width: 850px) {
-    #credit {
-        display: none;
+    #footer {
+        position: relative;
     }
 }
 
