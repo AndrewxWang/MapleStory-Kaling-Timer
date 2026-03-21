@@ -229,7 +229,7 @@ button:focus {
     font-size: 1.25rem;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 450px) {
     /* #footer {
         position: relative;
     } */
