@@ -107,7 +107,7 @@ function phaseThree() {
     makeTimer("Chain", 10, containerId, true, false);    
     // makeTimer("Slam", 13, containerId, false, false);
     makeTimer("Scroll", 12, containerId, false, false);
-    makeTimer("Strings", 12, containerId, true, false);
+    makeTimer("Strings", 10, containerId, true, false);
 }
 
 function phaseFour() {
@@ -116,9 +116,9 @@ function phaseFour() {
     section.innerHTML = "";
     
     document.getElementById("p4").style = "opacity: 0.5;";
-    makeTimer("FMA", 60, containerId, true);
+    makeTimer("FMA", 30, containerId, true);
     makeTimer("Clutch", 10, containerId, true, false);
-    makeTimer("Strings", 12, containerId, true, false);
+    makeTimer("Strings", 10, containerId, true, false);
 }
 
 let appleVar = 1;
