@@ -40,6 +40,9 @@ function makeTimer(name, start, containerId, repeat = false, autoStart = true) {
     section.appendChild(btn);
 }
 
+let fma = 60
+let p3_fma = 30
+
 function dog() {
     const containerId = "timers1";
     const section = document.getElementById(containerId);
@@ -49,7 +52,7 @@ function dog() {
     document.getElementById("bird").style = "opacity: 0.5;";
     document.getElementById("tiger").style = "opacity: 0.5;";
 
-    makeTimer("FMA", 60, containerId, true);
+    makeTimer("FMA", fma, containerId, true);
     makeTimer("Cloud", 35, containerId, false, false);
     makeTimer("Strings", 12, containerId, true, false);
 
@@ -78,7 +81,8 @@ function tiger() {
     document.getElementById("bird").style = "opacity: 0.5;";
     document.getElementById("tiger").style = "opacity: 1;";
 
-    makeTimer("FMA", 60, containerId, false, false);
+    // makeTimer("FMA", 60, containerId, false, false);
+    makeTimer("Triangle", 30, containerId, false, false);
     makeTimer("Dash", 10, containerId, false, false);
     makeTimer("TP", 10, containerId, false, false);
     makeTimer("Strings", 12, containerId, true, false);
@@ -90,7 +94,7 @@ function phaseTwo() {
     section.innerHTML = "";
 
     document.getElementById("p2").style = "opacity: 0.5;";
-    makeTimer("FMA", 60, containerId, true);
+    makeTimer("FMA", fma, containerId, true);
     makeTimer("Fly", 18, containerId);
     // makeTimer("Clutch", 15, containerId, true, false);
     makeTimer("Scroll", 30, containerId, false, false);
@@ -116,7 +120,7 @@ function phaseFour() {
     section.innerHTML = "";
     
     document.getElementById("p4").style = "opacity: 0.5;";
-    makeTimer("FMA", 30, containerId, true);
+    makeTimer("FMA", p3_fma, containerId, true);
     makeTimer("Clutch", 10, containerId, true, false);
     makeTimer("Strings", 10, containerId, true, false);
 }
